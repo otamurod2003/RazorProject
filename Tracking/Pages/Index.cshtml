@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<a class="btn btn-primary" asp-page="/new"> + Add new record</a>
+<div class="mt-5">
+    @if(Model.Issues == null)
+    {
+        <h1 class="text-danger text-center">No data to display</h1>
+    }
+    
+</div>
+
