@@ -1,0 +1,33 @@
+﻿@page
+@using static Tracking.Models.Issue;
+@model Tracking.Pages.Issues.NewModel
+@{
+}
+<div class="mt-5">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Issue.Title" class="form-label">Title</label>
+            <input asp-for="Issue.Title" class="form-control" />
+            <span asp-validation-for="Issue.Title" class="text text-danger"></span>
+        </div>
+
+    <div class="form-group">
+            <label asp-for="Issue.Description" class="form-label">Description</label>
+            <textarea asp-for="Issue.Description" class="form-control" rows="3" cols="30"></textarea>
+              <span asp-validation-for="Issue.Description" class="text text-danger"></span>
+        </div>
+       
+        <div class="form-group">
+            <label asp-for="Issue.Issuetype" class="form-label">Type</label>
+        <select class="form-select" asp-for="Issue.Issuetype" asp-items="Html.GetEnumSelectList<IssueType>()">
+            
+        </select>  
+          <div class="form-group">
+            <label asp-for="Issue.Priorities" class="form-label">Priority</label>
+        <select class="form-select" asp-for="Issue.Priorities" asp-items="Html.GetEnumSelectList<Priority>()">
+
+        </select>  
+        </div>
+        <button class="wt-20 btn btn-primary btn-lg">Submit Record</button>
+    </form>
+</div>
