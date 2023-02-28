@@ -1,10 +1,16 @@
-﻿namespace Tracking.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Tracking.Models
 {
     public class Issue
     {
 
         public uint id { get; set; }
+        [Required]
+        [StringLength(100)]
         public string Title { get; set; } = string.Empty;
+        [Required]
+        [StringLength(300)]
         public string Description { get; set; } = string.Empty;
         public Priority Priorities { get; set; }
 
@@ -20,7 +26,7 @@
         }
         public enum IssueType
         {
-            Faeture,
+            Feature,
             Bug,
             Documentation
         }

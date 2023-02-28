@@ -24,6 +24,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/practicVisualStudio/RazorProjects/Tracking/Pages/Issues/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXNzdWVzXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/practicVisualStudio/RazorProjects/Tracking/Pages/Issues/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXNzdWVzXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/practicVisualStudio/RazorProjects/Tracking/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -21,6 +21,6 @@ namespace Tracking.Pages
         }
 
         
-        public IEnumerable Issues { get; set; } = Enumerable.Empty<Issue>();
+        public IEnumerable<Issue> Issues { get; set; } = Enumerable.Empty<Issue>();
     }
 }

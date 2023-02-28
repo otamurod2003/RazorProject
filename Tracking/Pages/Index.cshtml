@@ -1,14 +1,36 @@
 ﻿@page
+@using Tracking.Extensions;
+@using Tracking.Models
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
-<a class="btn btn-primary" asp-page="/new"> + Add new record</a>
-<div class="mt-5">
-    @if(Model.Issues == null)
+<div class=mt-5>
+    <a class="btn btn-primary" asp-page="Issues/New"> +Add new record</a>
+    @if(Model.Issues.Count() == 0)
     {
-        <h1 class="text-danger text-center">No data to display</h1>
+        <p class="text-center text-danger">No data to Display</p>
+    } else
+    {
+        <div class="row g-0">
+            @foreach (var issue in Model.Issues)
+            {
+                <div class="card col-3 m-2 text-center">
+                    <div class="card-header">
+                        @issue.Issuetype
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a asp-page="/Issues/Detail" class="link-dark text-decoration-none" asp-route-id="@issue.id">@issue.Title</a>
+                        </h5>
+                        <span class="@issue.Priorities.ToCssClass()">@issue.Priorities</span>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <small>@issue.Created</small>
+                    </div>
+                </div>
+            }
+        </div>
+       
     }
-    
-</div>
-
+</>

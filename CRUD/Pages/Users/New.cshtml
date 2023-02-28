@@ -1,0 +1,18 @@
+﻿@page
+@using CRUD.Models
+@model CRUD.Pages.Users.NewModel
+@{
+}
+<div class="mt-3 col-md-5">
+    <form>
+        <label asp-for="@Model.User" class="form-label">Name</label>
+        <input class="form-control" />
+          <label asp-for="@Model.User" class="form-label">Surname</label>
+        <input class="form-control" />
+          <label asp-for="@Model.User" class="form-label">Job</label>
+        <input class="form-control" />
+          <label asp-for="@Model.User.Identities" class="form-label">Age</label>
+        <input class="form-control" />
+        <button class="btn btn-info">Submit</button>
+    </form>
+</div>
