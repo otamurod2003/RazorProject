@@ -18,7 +18,7 @@ namespace CRUD.Pages
                .ToListAsync();
         }
 
-        public IEnumerable<User> Issues { get; set; } = Enumerable.Empty<User>();
-        public List<User> Users { get; private set; }
+        
+        public IEnumerable<User> Users { get; set; } = Enumerable.Empty<User>();
     }
 }
